@@ -1,0 +1,130 @@
+.statusIndicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.online {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.offline {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.chatWindow {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 160px);
+  margin: 80px auto 20px;
+  width: 90%;
+  max-width: 1000px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.messageContainer {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: var(--secondary-color);
+}
+
+.messageItem {
+  margin-bottom: 20px;
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.userMessage {
+  align-self: flex-end;
+  background-color: var(--primary-color);
+  color: white;
+  margin-left: auto;
+}
+
+.assistantMessage {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  color: var(--text-color);
+}
+
+.inputContainer {
+  display: flex;
+  padding: 15px;
+  background-color: white;
+  border-top: 1px solid var(--border-color);
+}
+
+.inputField {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+  height: 50px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.inputField:focus {
+  border-color: var(--primary-color);
+}
+
+.sendButton {
+  margin-left: 10px;
+  padding: 0 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.sendButton:hover {
+  background-color: #0051a8;
+}
+
+.sendButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: dark) {
+  .messageItem.assistantMessage {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+  
+  .inputContainer {
+    background-color: rgb(var(--background-rgb));
+  }
+  
+  .inputField {
+    background-color: rgb(var(--background-rgb));
+    color: rgb(var(--foreground-rgb));
+  }
+}
