@@ -1,5 +1,6 @@
 # Project Specific
 uv.lock
+**/.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -29,6 +30,8 @@ share/python-wheels/
 *.egg
 MANIFEST
 .chainlit/
+**/node_modules/
+**/.next/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

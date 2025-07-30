@@ -1,0 +1,22 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 20px; /* Increased top padding to make room for the status indicator */
+  position: relative;
+}
+
+/* Animation for status change */
+@keyframes statusPulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+/* Apply animation to the status indicator when it changes */
+.statusChanged {
+  animation: statusPulse 1.5s ease-in-out;
+}
